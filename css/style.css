@@ -1,0 +1,263 @@
+/*
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500
+
+*/
+
+/* Start Variables */
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --font-weight-small: 300;
+  --font-weight-normal: 400;
+  --font-weight-large: 500;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+body {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--very-dark-blue);
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+.card .text {
+  background-color: var(--dark-blue);
+}
+
+/* End Components */
+
+/* Start Project */
+
+.project .container {
+  display: grid;
+  grid-template-areas: "main-card work play study" "main-card exercise social self-care";
+  gap: 40px;
+  min-height: 100vh;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+@media (max-width: 767px) {
+  .project .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+}
+
+.project .main-card {
+  grid-area: main-card;
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  height: 460px;
+}
+
+.project .main-card .top {
+  background-color: var(--blue);
+  border-radius: 15px;
+  padding: 10px 10px 50px;
+  height: 270.9px;
+}
+
+.project .main-card .top img {
+  width: 75px;
+  height: 75px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.project .main-card .top .report {
+  color: var(--dark-blue);
+  /* font-size: 20px; */
+}
+
+.project .main-card .top p:not(.report) {
+  color: white;
+  font-weight: var(--font-weight-large);
+  font-size: 35px;
+  font-weight: var(--font-weight-small);
+}
+
+.project .main-card .top p:nth-of-type(2) {
+  padding-top: 10px;
+}
+
+.project .main-card .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: calc(460px - 270.9px); /* Edit Height After Finish Cards */
+  padding-left: 10px;
+}
+
+.project .main-card .bottom > a {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+.project .main-card .bottom > a:hover {
+  color: white;
+}
+
+.project .card .img {
+  height: 50px;
+  overflow: hidden;
+  direction: rtl;
+  padding-right: 10px;
+  border-radius: 15px 15px 0 0;
+}
+
+.project .card .img img {
+  transform: translateY(-5px);
+}
+
+.project .card .text {
+  border-radius: 15px;
+  transform: translateY(-15px);
+}
+
+.project .card .text .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.project .card .text .title > p {
+  color: white;
+  font-weight: var(--font-weight-large);
+  padding: 10px;
+}
+
+.project .card .text .title .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.project .card .text .time {
+  font-size: 30px;
+  padding: 10px 20px;
+  color: white;
+}
+
+.project .card .text .time-ago {
+  color: var(--pale-blue);
+  padding: 10px 20px;
+  font-size: 12px;
+}
+
+.project .work {
+  grid-area: work;
+}
+
+.project .work .img {
+  background-color: var(--light-red-work);
+}
+
+.project .play {
+  grid-area: play;
+}
+
+.project .play .img {
+  background-color: var(--soft-blue-play);
+}
+
+.project .study {
+  grid-area: study;
+}
+
+.project .study .img {
+  background-color: var(--light-red-study);
+}
+
+.project .exercise {
+  grid-area: exercise;
+}
+
+.project .exercise .img {
+  background-color: var(--lime-green-exercise);
+}
+
+.project .social {
+  grid-area: social;
+}
+
+.project .social .img {
+  background-color: var(--violet-social);
+}
+
+.project .self-care {
+  grid-area: self-care;
+}
+
+.project .self-care .img {
+  background-color: var(--soft-orange-self-care);
+}
+
+/* End Project */
+
+/* JavaScript */
+
+.active {
+  color: white !important;
+}

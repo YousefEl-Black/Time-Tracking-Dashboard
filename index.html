@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking Dashboard</title>
+    <link rel="shortcut icon" href="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.rules.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+
+    <div class="project">
+      <div class="container">
+        <div class="main-card">
+          <div class="top">
+            <div class="img"><img src="imgs/image-jeremy.png" alt=""></div>
+            <p class="report">Report For</p>
+            <p class="first-name">Jeremy</p>
+            <p class="last-name">Robson</p>
+          </div>
+          <div class="bottom">
+            <a href="#" onclick="active(0)" data-index="0">Daily</a>
+            <a href="#" onclick="active(1)">Weekly</a>
+            <a href="#" onclick="active(2)" class="active">Monthly</a>
+          </div>
+        </div>
+        <div class="work card">
+          <div class="img">
+            <img src="imgs/icon-work.svg" alt="">
+          </div>
+          <div class="text">
+            <div class="title">
+              <p>Work</p>
+              <div class="list">
+                <img src="imgs/icon-ellipsis.svg" alt="">
+              </div>
+            </div>
+            <div class="time"><span></span>hrs</div>
+            <div class="time-ago">Last <span></span> - <span></span>hrs</div>
+          </div>
+        </div>
+        <div class="play card">
+          <div class="img">
+            <img src="imgs/icon-play.svg" alt="">
+          </div>
+          <div class="text">
+            <div class="title">
+              <p>Play</p>
+              <div class="list">
+                <img src="imgs/icon-ellipsis.svg" alt="">
+              </div>
+            </div>
+            <div class="time"><span></span>hrs</div>
+            <div class="time-ago">Last <span></span> - <span></span>hrs</div>
+          </div>
+        </div>
+        <div class="study card">
+          <div class="img">
+            <img src="imgs/icon-study.svg" alt="">
+          </div>
+          <div class="text">
+            <div class="title">
+              <p>Study</p>
+              <div class="list">
+                <img src="imgs/icon-ellipsis.svg" alt="">
+              </div>
+            </div>
+            <div class="time"><span></span>hrs</div>
+            <div class="time-ago">Last <span></span> - <span></span>hrs</div>
+          </div>
+        </div>
+        <div class="exercise card">
+          <div class="img">
+            <img src="imgs/icon-exercise.svg" alt="">
+          </div>
+          <div class="text">
+            <div class="title">
+              <p>Exercise</p>
+              <div class="list">
+                <img src="imgs/icon-ellipsis.svg" alt="">
+              </div>
+            </div>
+            <div class="time"><span></span>hrs</div>
+            <div class="time-ago">Last <span></span> - <span></span>hrs</div>
+          </div>
+        </div>
+        <div class="social card">
+          <div class="img">
+            <img src="imgs/icon-social.svg" alt="">
+          </div>
+          <div class="text">
+            <div class="title">
+              <p>Social</p>
+              <div class="list">
+                <img src="imgs/icon-ellipsis.svg" alt="">
+              </div>
+            </div>
+            <div class="time"><span></span>hrs</div>
+            <div class="time-ago">Last <span></span> - <span></span>hrs</div>
+          </div>
+        </div>
+        <div class="self-care card" id="self-care">
+          <div class="img">
+            <img src="imgs/icon-self-care.svg" alt="">
+          </div>
+          <div class="text">
+            <div class="title">
+              <p>Self Care</p>
+              <div class="list">
+                <img src="imgs/icon-ellipsis.svg" alt="">
+              </div>
+            </div>
+            <div class="time"><span></span>hrs</div>
+            <div class="time-ago">Last <span></span> - <span></span>hrs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
